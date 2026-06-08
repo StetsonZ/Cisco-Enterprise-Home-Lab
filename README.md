@@ -19,11 +19,11 @@ Phase 1 focused on:
 
 ### Physical Lab
 
-![Physical Lab](Images/Phase%201%20Physical%20Lab.jpeg)
+![Physical Lab](images/Phase%201%20Physical%20Lab.jpeg)
 
 ### Logical Topology
 
-![Logical Topology](Images/Phase%201%20Logical%20Topology.png)
+![Logical Topology](images/Phase%201%20Logical%20Topology.png)
 
 ---
 
@@ -51,6 +51,7 @@ Configuration backups are stored in the `Configs` directory.
 ## Technologies Used
 
 - Cisco Catalyst 3560 Switches
+- Cisco Catalyst 2560 Switches
 - Cisco 2811 Router
 - VLANs
 - 802.1Q Trunking
