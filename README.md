@@ -44,7 +44,7 @@ Phase 1 focused on:
 
 ## Device Configurations
 
-Configuration backups are stored in the `Configs` directory.
+Configuration backups are stored in the `configs` directory.
 
 ---
 
