@@ -12,7 +12,7 @@ OSPF Verification:
 - Routing tables
 - OSPF neighbors
 
-		DSW1
+## DSW1
 
 ![Pasted image 20260710133500](../images/Pasted%20image%2020260710133500.png)
 ![Pasted image 20260710133526](../images/Pasted%20image%2020260710133526.png)
@@ -21,7 +21,7 @@ OSPF Verification:
 ![Pasted image 20260710133804](../images/Pasted%20image%2020260710133804.png)
 
 
-	RTR-2
+## RTR-2
 
 ![Pasted image 20260710133942](../images/Pasted%20image%2020260710133942.png)
 ![Pasted image 20260710134007](../images/Pasted%20image%2020260710134007.png)
@@ -30,7 +30,7 @@ OSPF Verification:
 ![Pasted image 20260710134122](../images/Pasted%20image%2020260710134122.png)
 ![Pasted image 20260710134132](../images/Pasted%20image%2020260710134132.png)
 
-	RTR-3
+## RTR-3
 
 ![Pasted image 20260710134408](../images/Pasted%20image%2020260710134408.png)
 ![Pasted image 20260710134420](../images/Pasted%20image%2020260710134420.png)
@@ -40,7 +40,7 @@ OSPF Verification:
 ![Pasted image 20260710134516](../images/Pasted%20image%2020260710134516.png)
 
 
-	RTR-4
+## RTR-4
 	
 ![Pasted image 20260710134632](../images/Pasted%20image%2020260710134632.png)
 ![Pasted image 20260710134643](../images/Pasted%20image%2020260710134643.png)
