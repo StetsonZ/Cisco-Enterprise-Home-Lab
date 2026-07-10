@@ -1,6 +1,6 @@
 ![Pasted image 20260701110748](../images/Pasted%20image%2020260701110748.png)
-![[Pasted image 20260703114130.jpg|374]]
-![[Pasted image 20260703114135.jpg|135]]
+![Pasted image 20260703114130](../images/Pasted%20image%2020260703114130.jpg)
+![Pasted image 20260703114135](../images/Pasted%20image%2020260703114135.jpg)
 
 Topology Summary
 
