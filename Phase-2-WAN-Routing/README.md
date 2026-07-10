@@ -126,8 +126,7 @@ These interfaces were advertised through OSPF.
 
 ### Logical Topology
 
-![Logical Topology](images/Phase%202%20Logical%20Topology.png)
-
+![Pasted image 20260701110748](../images/Pasted%20image%2020260701110748.png)
 ---
 
 # Technologies Implemented
