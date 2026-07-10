@@ -14,7 +14,6 @@ OSPF Verification:
 
 	DSW1
 
-![Pasted image 20260710133645](../images/Pasted%20image%2020260710133645.png)
 ![Pasted image 20260710133500](../images/Pasted%20image%2020260710133500.png)
 ![Pasted image 20260710133526](../images/Pasted%20image%2020260710133526.png)
 ![Pasted image 20260710133600](../images/Pasted%20image%2020260710133600.png)
