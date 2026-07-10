@@ -128,6 +128,10 @@ These interfaces were advertised through OSPF.
 
 ![Phase 2 Logical Topology](images/Pasted%20image%2020260701110748.png)
 
+### Physical Lab
+
+![Phase 2 Physical Topology](images/Pasted%20image%2020260703114130.jpg)
+
 ---
 
 # Technologies Implemented
