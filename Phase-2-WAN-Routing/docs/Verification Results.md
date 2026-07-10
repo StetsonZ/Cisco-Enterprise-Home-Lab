@@ -7,6 +7,7 @@ Static Route Verification (Routing Tables):
 ![RTR-3 static route check](../images/RTR-3%20static%20route%20check.png)
 
 ![RTR-4 static route check](../images/RTR-4%20static%20route%20check.png)
+
 All pings between all routed devices were successful with the static routing configuration
 
 OSPF Verification:
