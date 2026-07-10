@@ -29,8 +29,7 @@ OSPF Verification:
 ![Pasted image 20260710134040](../images/Pasted%20image%2020260710134040.png)
 ![Pasted image 20260710134111](../images/Pasted%20image%2020260710134111.png)
 ![Pasted image 20260710134122](../images/Pasted%20image%2020260710134122.png)
-![Pasted image 20260710134132](../images/Pasted%20image%20260710134132.png)
-
+![Pasted image 20260710134132](../images/Pasted%20image%2020260710134132.png)
 
 	RTR-3
 
