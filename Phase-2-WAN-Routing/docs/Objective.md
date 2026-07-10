@@ -1,0 +1,1 @@
+Expand the existing campus network by implementing a routed WAN using Cisco routers connected through serial point-to-point links. This phase introduces static routing, dynamic routing with OSPF, and routing verification between the campus LAN and remote routers.

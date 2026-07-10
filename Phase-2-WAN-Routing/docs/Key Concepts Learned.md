@@ -1,0 +1,7 @@
+- Point-to-point WAN addressing
+- Serial interface configuration
+- Static route implementation
+- Dynamic routing with OSPF
+- OSPF neighbor formation
+- Route advertisement
+- Enterprise routing verification
