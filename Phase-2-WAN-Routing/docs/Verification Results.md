@@ -1,9 +1,12 @@
 Static Route Verification (Routing Tables):
 
-![[DSW1 static route check.png|317]]
-![[RTR-2 static route check.png|320]]
-![[RTR-3 static route check.png|327]]
-![[RTR-4 static route check.png|325]]
+![DSW1 static route check](../images/DSW1%20static%20route%20check.png)
+
+![RTR-2 static route check](../images/RTR-2%20static%20route%20check.png)
+
+![RTR-3 static route check](../images/RTR-3%20static%20route%20check.png)
+
+![RTR-4 static route check](../images/RTR-4%20static%20route%20check.png)
 All pings between all routed devices were successful with the static routing configuration
 
 OSPF Verification:
