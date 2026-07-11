@@ -180,12 +180,17 @@ This reinforced the importance of maintaining consistent IP addressing and under
 Detailed documentation is available in the `docs` directory:
 
 - [Objective](docs/Objective.md)
+- [Learning Objectives](docs/Learning%20Objectives.md)
+- [Network Topology Overview](docs/Network%20Topology%20Overview.md)
 - [IP Addressing Scheme](docs/IP%20Addressing%20Scheme.md)
-- [Device Interface Mapping](docs/Device%20Interface Mapping.md)
+- [Device Interface Mapping](docs/Device%20Interface%20Mapping.md)
 - [Routing Design](docs/Routing%20Design.md)
 - [OSPF Design](docs/OSPF%20Design.md)
+- [Phase 2 Implementation Plan](docs/Phase%202%20Implementation%20Plan.md)
 - [Verification Results](docs/Verification%20Results.md)
 - [Troubleshooting](docs/Troubleshooting.md)
+- [Key Concepts Learned](docs/Key%20Concepts%20Learned.md)
+- [Phase 2 Completion Checklist](Phase%202%20Completion%20Checklist.md)
 - [Phase 2 Conclusion](docs/Phase%202%20Conclusion.md)
 
 ---
