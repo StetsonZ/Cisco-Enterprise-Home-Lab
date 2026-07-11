@@ -190,7 +190,7 @@ Detailed documentation is available in the `docs` directory:
 - [Verification Results](docs/Verification%20Results.md)
 - [Troubleshooting](docs/Troubleshooting.md)
 - [Key Concepts Learned](docs/Key%20Concepts%20Learned.md)
-- [Phase 2 Completion Checklist](Phase%202%20Completion%20Checklist.md)
+- [Phase 2 Completion Checklist](docs/Phase%202%20Completion%20Checklist.md)
 - [Phase 2 Conclusion](docs/Phase%202%20Conclusion.md)
 
 ---
