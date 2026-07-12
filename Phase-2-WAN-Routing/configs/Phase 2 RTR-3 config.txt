@@ -1,0 +1,124 @@
+RTR-3#sh run
+Building configuration...
+
+
+Current configuration : 1247 bytes
+!
+! No configuration change since last restart
+version 15.1
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname RTR-3
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+dot11 syslog
+ip source-route
+!
+!
+ip cef
+!
+!
+!
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+voice-card 0
+!
+crypto pki token default removal timeout 0
+!
+!
+!
+!
+license udi pid CISCO2811 sn FTX1124A5HY
+!
+redundancy
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 10.255.3.3 255.255.255.255
+!
+interface FastEthernet0/0
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+!
+interface Serial0/0/0
+ ip address 10.10.100.6 255.255.255.252
+ no fair-queue
+!
+interface Serial0/0/1
+ ip address 10.10.100.9 255.255.255.252
+ clock rate 128000
+!
+router ospf 1
+ network 10.10.100.4 0.0.0.3 area 0
+ network 10.10.100.8 0.0.0.3 area 0
+ network 10.255.3.3 0.0.0.0 area 0
+!
+ip forward-protocol nd
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+mgcp profile default
+!
+!
+!
+!
+!
+!
+line con 0
+line aux 0
+line vty 0 4
+ login
+ transport input all
+!
+scheduler allocate 20000 1000
+end

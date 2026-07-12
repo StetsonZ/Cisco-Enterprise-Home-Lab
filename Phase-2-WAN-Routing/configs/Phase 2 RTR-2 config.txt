@@ -1,0 +1,135 @@
+RTR-2#sh run
+Building configuration...
+
+
+Current configuration : 1557 bytes
+!
+! No configuration change since last restart
+version 15.1
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname RTR-2
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+dot11 syslog
+ip source-route
+!
+!
+ip cef
+!
+ip dhcp excluded-address 10.10.10.100 10.10.10.199
+ip dhcp excluded-address 10.10.20.100 10.10.20.199
+!
+ip dhcp pool POOL1_Users
+ network 10.10.10.0 255.255.255.0
+ default-router 10.10.10.1
+!
+ip dhcp pool POOL2_Servers/Lab
+ network 10.10.20.0 255.255.255.0
+ default-router 10.10.20.1
+!
+!
+no ip domain lookup
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+voice-card 0
+!
+crypto pki token default removal timeout 0
+!
+!
+!
+!
+license udi pid CISCO2811 sn FTX1124A666
+!
+redundancy
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 10.255.2.2 255.255.255.255
+!
+interface FastEthernet0/0
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1
+ ip address 10.10.100.2 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface Serial0/0/0
+ ip address 10.10.100.5 255.255.255.252
+ clock rate 128000
+!
+interface Serial0/0/1
+ no ip address
+ shutdown
+ clock rate 125000
+!
+router ospf 1
+ network 10.10.100.0 0.0.0.3 area 0
+ network 10.10.100.4 0.0.0.3 area 0
+ network 10.255.2.2 0.0.0.0 area 0
+!
+ip forward-protocol nd
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+mgcp profile default
+!
+!
+!
+!
+!
+!
+line con 0
+line aux 0
+line vty 0 4
+ login
+ transport input all
+!
+scheduler allocate 20000 1000
+end
