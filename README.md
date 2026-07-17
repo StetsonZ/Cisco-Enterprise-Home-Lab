@@ -14,7 +14,6 @@ The purpose of this project is to develop and demonstrate practical enterprise n
 
 - Cisco 2811 Integrated Services Routers
 - Cisco 2821 Integrated Services Router
-- Cisco 2509 Access Server
 
 ## Switches
 
@@ -94,34 +93,34 @@ Cisco-Enterprise-Home-Lab
 ├── README.md
 │
 ├── images
-│ ├── Phase 1 images
-│ ├── Phase 2 images
-│ └── Phase 3 images
+│   ├── Phase 1 images
+│   ├── Phase 2 images
+│   └── Phase 3 images
 │
 ├── Phase-1-Campus-Network
-│ ├── README.md
-│ ├── configs
-│ └── docs
+│   ├── README.md
+│   ├── configs
+│   └── docs
 │
 ├── Phase-2-WAN-Routing
-│ ├── README.md
-│ ├── configs
-│ └── docs
+│   ├── README.md
+│   ├── configs
+│   └── docs
 │
 ├── Phase-3-Network-Redundancy
-│ ├── README.md
-│ ├── configs
-│ └── docs
+│   ├── README.md
+│   ├── configs
+│   └── docs
 │
 ├── Phase-4-Network-Security
-│ ├── README.md
-│ ├── configs
-│ └── docs
+│   ├── README.md
+│   ├── configs
+│   └── docs
 │
 └── Phase-5-Enterprise-Services
-├── README.md
-├── configs
-└── docs
+    ├── README.md
+    ├── configs
+    └── docs
 
 ---
 
