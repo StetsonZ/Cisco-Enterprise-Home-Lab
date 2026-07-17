@@ -66,3 +66,120 @@ Purpose:
 - Increase bandwidth
 - Provide link redundancy
 - Maintain routing connectivity if a physical link fails
+
+---
+
+# Spanning Tree Optimization
+
+Configured Rapid PVST+ across the campus switches.
+
+STP root bridge placement was aligned with HSRP active gateways:
+
+| VLAN | Root Primary |
+|---|---|
+| VLAN 10 | DSW1 |
+| VLAN 20 | DSW2 |
+| VLAN 99 | DSW1 |
+
+This ensured optimal Layer 2 forwarding paths and minimized unnecessary traffic flow.
+
+---
+
+# OSPF Expansion
+
+Expanded OSPF Area 0 to include DSW2.
+
+Advertised:
+
+- VLAN interfaces
+- Loopback interfaces
+- Routed EtherChannel link
+
+DSW1 and DSW2 successfully formed an OSPF adjacency and exchanged routes with the WAN routers.
+
+---
+
+# High Availability Testing
+
+Multiple failure scenarios were tested to verify network resiliency.
+
+| Test | Result |
+|---|---|
+| DSW1 failure | HSRP failed over successfully |
+| DSW1 recovery | HSRP preemption restored normal operation |
+| DSW2 failure | Network remained operational |
+| EtherChannel member failure | Port-Channel remained active |
+| Access uplink failure | STP reconverged successfully |
+| Layer 3 EtherChannel failure | OSPF adjacency failed as expected |
+| Layer 3 EtherChannel recovery | OSPF restored connectivity |
+
+All planned failover tests completed successfully.
+
+---
+
+# Troubleshooting Highlights
+
+## Layer 3 EtherChannel Configuration
+
+Resolved a suspended EtherChannel caused by incorrect configuration order.
+
+**Lesson learned:** Layer 3 EtherChannel interfaces must be converted to routed ports using `no switchport` before assigning them to a channel group.
+
+---
+
+## HSRP Neighbor Formation
+
+Resolved HSRP communication issues caused by missing trunk configuration between redundant switches.
+
+**Lesson learned:** HSRP requires Layer 2 connectivity between peers for hello messages.
+
+---
+
+## Cisco IOS Upgrade
+
+DSW2 initially ran an IP Base image that did not support OSPF.
+
+The issue was resolved by:
+
+- Configuring a TFTP server
+- Transferring the IP Services IOS image
+- Updating the boot variable
+- Reloading DSW2
+- Verifying OSPF functionality
+
+**Lesson learned:** Cisco feature availability depends on the installed IOS feature set.
+
+---
+
+# Skills Demonstrated
+
+- Enterprise campus design
+- High availability architecture
+- HSRP configuration
+- Layer 3 switching
+- LACP EtherChannel
+- Rapid PVST+
+- OSPF routing
+- IOS image upgrades
+- Network troubleshooting
+- Failure simulation and validation testing
+
+---
+
+# Phase Documentation
+
+For complete implementation details, addressing tables, interface mappings, configuration steps, verification outputs, and troubleshooting notes, see:
+
+[Phase 3 Documentation](./Phase-3-Documentation.md)
+
+---
+
+# Phase Completion Status
+
+✅ Redundant distribution switching implemented  
+✅ HSRP operational  
+✅ OSPF expanded to DSW2  
+✅ Layer 3 EtherChannel operational  
+✅ Rapid PVST+ optimized  
+✅ Failover testing completed  
+✅ Network resiliency validated  
