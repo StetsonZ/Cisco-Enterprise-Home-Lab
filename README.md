@@ -88,6 +88,8 @@ The purpose of this project is to develop and demonstrate practical enterprise n
 ---
 
 # Repository Structure
+
+```text
 Cisco-Enterprise-Home-Lab
 │
 ├── README.md
@@ -121,6 +123,7 @@ Cisco-Enterprise-Home-Lab
     ├── README.md
     ├── configs
     └── docs
+```
 
 ---
 
