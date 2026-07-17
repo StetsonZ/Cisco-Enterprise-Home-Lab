@@ -1,0 +1,159 @@
+Building configuration...
+
+Current configuration : 2679 bytes
+!
+version 12.2
+no service pad
+service timestamps debug uptime
+service timestamps log uptime
+no service password-encryption
+!
+hostname DSW1
+!
+!
+no aaa new-model
+ip subnet-zero
+ip routing
+no ip domain-lookup
+!
+!
+!
+!
+!
+!
+no file verify auto
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+spanning-tree vlan 10,99 priority 24576
+spanning-tree vlan 20 priority 28672
+!
+vlan internal allocation policy ascending
+!
+!
+interface Loopback0
+ ip address 10.255.1.1 255.255.255.255
+!
+interface Port-channel1
+ no switchport
+ ip address 10.10.101.1 255.255.255.252
+!
+interface FastEthernet0/1
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1,10,20,99
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface FastEthernet0/2
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1,10,20,99
+ switchport mode trunk
+!
+interface FastEthernet0/3
+!
+interface FastEthernet0/4
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+ no switchport
+ no ip address
+ channel-group 1 mode active
+!
+interface FastEthernet0/23
+ no switchport
+ no ip address
+ channel-group 1 mode active
+!
+interface FastEthernet0/24
+ no switchport
+ ip address 10.10.100.1 255.255.255.252
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan10
+ ip address 10.10.10.2 255.255.255.0
+ ip helper-address 10.10.100.2
+ standby 10 ip 10.10.10.1
+ standby 10 priority 110
+ standby 10 preempt
+!
+interface Vlan20
+ ip address 10.10.20.2 255.255.255.0
+ ip helper-address 10.10.100.2
+ standby 20 ip 10.10.20.1
+ standby 20 priority 90
+ standby 20 preempt
+!
+interface Vlan99
+ ip address 10.10.99.2 255.255.255.0
+ standby 99 ip 10.10.99.1
+ standby 99 priority 110
+ standby 99 preempt
+!
+router ospf 1
+ log-adjacency-changes
+ passive-interface Vlan10
+ passive-interface Vlan20
+ passive-interface Vlan99
+ network 10.10.10.0 0.0.0.255 area 0
+ network 10.10.20.0 0.0.0.255 area 0
+ network 10.10.99.0 0.0.0.255 area 0
+ network 10.10.100.0 0.0.0.3 area 0
+ network 10.10.101.0 0.0.0.3 area 0
+ network 10.255.1.1 0.0.0.0 area 0
+!
+ip classless
+ip http server
+ip http secure-server
+!
+!
+!
+control-plane
+!
+!
+line con 0
+line vty 0 4
+ no login
+line vty 5 15
+ no login
+!
+end
