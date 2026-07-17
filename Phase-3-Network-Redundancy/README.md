@@ -35,7 +35,7 @@ Phase 3 introduced the following design improvements:
 
 ![Phase 3 Logical Topology](../images/Phase%203%20Logical%20Topology.png)
 
-![Phase 3 Hardware](../images/Phase%203%20hardware.jpeg)
+![Phase 3 Hardware](../images/Phase%203%20Hardware.jpeg)
 
 ---
 
