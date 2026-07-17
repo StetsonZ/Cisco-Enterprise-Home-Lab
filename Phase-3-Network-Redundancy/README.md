@@ -170,7 +170,7 @@ The issue was resolved by:
 
 For complete implementation details, addressing tables, interface mappings, configuration steps, verification outputs, and troubleshooting notes, see:
 
-[Phase 3 Documentation](./Phase-3-Documentation.md)
+[Phase 3 Documentation](docs/Phase-3-Documentation.md)
 
 ---
 
