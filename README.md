@@ -94,34 +94,34 @@ Cisco-Enterprise-Home-Lab
 │
 ├── README.md
 │
-├── images
-│   ├── Phase 1 images
-│   ├── Phase 2 images
-│   └── Phase 3 images
-│
 ├── Phase-1-Campus-Network
 │   ├── README.md
 │   ├── configs
+│   ├── images
 │   └── docs
 │
 ├── Phase-2-WAN-Routing
 │   ├── README.md
 │   ├── configs
+│   ├── images
 │   └── docs
 │
 ├── Phase-3-Network-Redundancy
 │   ├── README.md
 │   ├── configs
+│   ├── images
 │   └── docs
 │
 ├── Phase-4-Network-Security
 │   ├── README.md
 │   ├── configs
+│   ├── images
 │   └── docs
 │
 └── Phase-5-Enterprise-Services
     ├── README.md
     ├── configs
+│   ├── images
     └── docs
 ```
 
