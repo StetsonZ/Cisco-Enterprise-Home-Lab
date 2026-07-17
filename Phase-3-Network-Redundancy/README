@@ -1,5 +1,6 @@
-Phase 3 - Campus Redundancy
-Overview
+# Phase 3 - Campus Redundancy
+
+## Overview
 
 Phase 3 focused on transforming the campus network into a highly available enterprise design by implementing redundancy at both Layer 2 and Layer 3.
 
@@ -7,151 +8,61 @@ This phase introduced redundant distribution switching, first-hop redundancy, dy
 
 The goal was to design a campus network capable of maintaining connectivity during device and link failures while automatically recovering through redundancy protocols.
 
-Objectives
-Convert the campus network into a redundant architecture
-Implement gateway redundancy using HSRP
-Add redundant access-layer uplinks
-Configure Layer 3 EtherChannel using LACP
-Optimize Layer 2 forwarding with Rapid PVST+
-Expand OSPF to the secondary distribution switch
-Validate network resiliency through failure testing
-Topology Changes
+---
+
+# Objectives
+
+- Convert the campus network into a redundant architecture
+- Implement gateway redundancy using HSRP
+- Add redundant access-layer uplinks
+- Configure Layer 3 EtherChannel using LACP
+- Optimize Layer 2 forwarding with Rapid PVST+
+- Expand OSPF to the secondary distribution switch
+- Validate network resiliency through failure testing
+
+---
+
+# Topology Changes
 
 Phase 3 introduced the following design improvements:
 
-DSW1 and DSW2 now operate as Layer 3 distribution switches
-Access switches are dual-homed to both distribution switches
-DSW1 and DSW2 are connected through a Layer 3 EtherChannel
-HSRP provides redundant default gateways
-Rapid PVST+ provides loop prevention and optimized forwarding
-OSPF provides dynamic routing between the campus and WAN
+- DSW1 and DSW2 now operate as Layer 3 distribution switches
+- Access switches are dual-homed to both distribution switches
+- DSW1 and DSW2 are connected through a Layer 3 EtherChannel
+- HSRP provides redundant default gateways
+- Rapid PVST+ provides loop prevention and optimized forwarding
+- OSPF provides dynamic routing between the campus and WAN
 
+![Phase 3 Logical Topology](./Images/Phase%203%20Logical%20Topology.png)
 
+![Phase 3 Hardware](./Images/Phase%203%20hardware.jpeg)
 
+---
 
+# Technologies Implemented
 
+## First Hop Redundancy
 
-
-Technologies Implemented
-First Hop Redundancy
-HSRP
+## HSRP
 
 Implemented HSRP across VLANs 10, 20, and 99 to provide redundant default gateways.
 
-VLAN	Active Router	Standby Router
-VLAN 10	DSW1	DSW2
-VLAN 20	DSW2	DSW1
-VLAN 99	DSW1	DSW2
+| VLAN | Active Router | Standby Router |
+|---|---|---|
+| VLAN 10 | DSW1 | DSW2 |
+| VLAN 20 | DSW2 | DSW1 |
+| VLAN 99 | DSW1 | DSW2 |
 
 Traffic was load balanced between distribution switches while maintaining gateway availability.
 
-Layer 3 EtherChannel
+---
+
+# Layer 3 EtherChannel
 
 Implemented an LACP Layer 3 EtherChannel between DSW1 and DSW2.
 
 Purpose:
 
-Increase bandwidth
-Provide link redundancy
-Maintain routing connectivity if a physical link fails
-DSW1 Fa0/22-23
-        |
-     Port-Channel1
-        |
-DSW2 Fa0/22-23
-Spanning Tree Optimization
-
-Configured Rapid PVST+ across the campus switches.
-
-STP root bridge placement was aligned with HSRP active gateways:
-
-VLAN	Root Primary
-VLAN 10	DSW1
-VLAN 20	DSW2
-VLAN 99	DSW1
-
-This ensured optimal Layer 2 forwarding paths and minimized unnecessary traffic flow.
-
-OSPF Expansion
-
-Expanded OSPF Area 0 to include DSW2.
-
-Advertised:
-
-VLAN interfaces
-Loopback interfaces
-Routed EtherChannel link
-
-DSW1 and DSW2 successfully formed an OSPF adjacency and exchanged routes with the WAN routers.
-
-High Availability Testing
-
-Multiple failure scenarios were tested to verify network resiliency.
-
-Test	Result
-DSW1 failure	HSRP failed over successfully
-DSW1 recovery	HSRP preemption restored normal operation
-DSW2 failure	Network remained operational
-EtherChannel member failure	Port-Channel remained active
-Access uplink failure	STP reconverged successfully
-Layer 3 EtherChannel failure	OSPF adjacency failed as expected
-Layer 3 EtherChannel recovery	OSPF restored connectivity
-
-All planned failover tests completed successfully.
-
-Troubleshooting Highlights
-
-During implementation, several real-world issues were encountered:
-
-Layer 3 EtherChannel Configuration
-
-Resolved a suspended EtherChannel caused by incorrect configuration order.
-
-Lesson learned: Layer 3 EtherChannel interfaces must be converted to routed ports using no switchport before assigning them to a channel group.
-
-HSRP Neighbor Formation
-
-Resolved HSRP communication issues caused by missing trunk configuration between redundant switches.
-
-Lesson learned: HSRP requires Layer 2 connectivity between peers for hello messages.
-
-Cisco IOS Upgrade
-
-DSW2 initially ran an IP Base image that did not support OSPF.
-
-The issue was resolved by:
-
-Configuring a TFTP server
-Transferring the IP Services IOS image
-Updating the boot variable
-Reloading DSW2
-Verifying OSPF functionality
-
-Lesson learned: Cisco feature availability depends on the installed IOS feature set.
-
-Skills Demonstrated
-Enterprise campus design
-High availability architecture
-HSRP configuration
-Layer 3 switching
-LACP EtherChannel
-Rapid PVST+
-OSPF routing
-IOS image upgrades
-Network troubleshooting
-Failure simulation and validation testing
-Phase Documentation
-
-For complete implementation details, addressing tables, interface mappings, configuration steps, verification outputs, and troubleshooting notes, see:
-
-📄 Phase 3 Documentation
-
-Phase Completion Status
-
-✅ Redundant distribution switching implemented
-✅ HSRP operational
-✅ OSPF expanded to DSW2
-✅ Layer 3 EtherChannel operational
-✅ Rapid PVST+ optimized
-✅ Failover testing completed
-✅ Network resiliency validated
+- Increase bandwidth
+- Provide link redundancy
+- Maintain routing connectivity if a physical link fails
