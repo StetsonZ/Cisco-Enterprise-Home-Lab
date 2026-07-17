@@ -30,8 +30,8 @@ The purpose of this project is to develop and demonstrate practical enterprise n
 |-------|:------:|--------------|
 | **Phase 1 – Campus Network Foundation** | ✅ Complete | VLANs, Layer 2 Switching, Inter-VLAN Routing, DHCP |
 | **Phase 2 – WAN Routing** | ✅ Complete | Serial WAN Links, Static Routing, OSPF |
-| **Phase 3 – Network Redundancy** | 🚧 In Progress | HSRP, EtherChannel, STP, Redundant Links |
-| **Phase 4 – Network Security** | ⏳ Planned | ASA Firewall, ACLs, NAT, VPN |
+| **Phase 3 – Network Redundancy** | ✅ Complete | HSRP, EtherChannel, STP, Redundant Links |
+| **Phase 4 – Network Security** | 🚧 In Progress | ACLs, Port-Security, SSH, DAI, DHCP Snooping |
 | **Phase 5 – Enterprise Services** | ⏳ Planned | Monitoring, Logging, Network Services |
 
 ---
