@@ -183,3 +183,26 @@ For complete implementation details, addressing tables, interface mappings, conf
 ✅ Rapid PVST+ optimized  
 ✅ Failover testing completed  
 ✅ Network resiliency validated  
+---
+
+# Next Phase - Network Security
+
+Phase 4 will focus on securing the campus network by implementing Layer 2 security features, access control, and infrastructure hardening.
+
+Planned implementations include:
+
+- Port Security
+- DHCP Snooping
+- Dynamic ARP Inspection (DAI)
+- IP Source Guard
+- BPDU Guard
+- Root Guard
+- PortFast optimization
+- Secure management access
+- SSH configuration
+- Device hardening best practices
+- Access Control Lists (ACLs)
+
+The goal of Phase 4 is to transition the network from a highly available design into a secure enterprise environment by protecting against common Layer 2 attacks, unauthorized access, and misconfigurations.
+
+---
