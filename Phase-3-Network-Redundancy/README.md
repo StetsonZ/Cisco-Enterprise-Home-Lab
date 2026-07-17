@@ -170,8 +170,23 @@ The issue was resolved by:
 
 For complete implementation details, addressing tables, interface mappings, configuration steps, verification outputs, and troubleshooting notes, see:
 
-[Objective](docs/Objective.md)
-
+- [Objective](./docs/Objective.md)
+- [Topology Summary](./docs/Topology%20Summary.md)
+- [Learning Objectives](./docs/Learning%20Objectives.md)
+- [Existing Campus Networks](./docs/Existing%20Campus%20Networks.md)
+- [HSRP Addressing Plan](./docs/HSRP%20Addressing%20Plan.md)
+- [Loopback Interfaces](./docs/Loopback%20Interfaces.md)
+- [Device Interface Mapping](./docs/Device%20Interface%20Mapping.md)
+- [FHRP Design](./docs/FHRP%20Design.md)
+- [Spanning Tree Design](./docs/Spanning%20Tree%20Design.md)
+- [EtherChannel Design](./docs/EtherChannel%20Design.md)
+- [OSPF Design](./docs/OSPF%20Design.md)
+- [Phase 3 Implementation Plan](./docs/Phase%203%20Implementation%20Plan.md)
+- [Phase 3 Completion Checklist](./docs/Phase%203%20Completion%20Checklist.md)
+- [Verification Results](./docs/Verification%20Results.md)
+- [Phase 3 Validation Results](./docs/Phase%203%20Validation%20Results.md)
+- [Troubleshooting](./docs/Troubleshooting.md)
+- [Summary](./docs/Summary.md)
 ---
 
 # Phase Completion Status
