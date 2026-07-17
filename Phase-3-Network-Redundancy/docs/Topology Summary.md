@@ -4,5 +4,5 @@
 - EtherChannel provides redundant high-bandwidth links.
 - Rapid PVST+ prevents Layer 2 loops while maintaining redundancy.
 - OSPF continues to provide dynamic routing between the campus and WAN.
- ![[Phase 3 Logical Topology.png]]
-![[Phase 3 hardware.jpeg|446]]
+![Phase 3 Logical Topology](./Images/Phase%203%20Logical%20Topology.png)
+![Phase 3 Hardware](./Images/Phase%203%20hardware.jpeg)
